@@ -11,11 +11,12 @@ public class Student {
 	private String courses;
 	private int tuitionBalance;
 	private int costOfCourse = 600;
-	private Scanner in;/* =new Scanner (System.in)*/;/*Not sure if this is a good idea*/
+	private Scanner in =new Scanner (System.in);/*Not sure if this is a good idea*/
 	private static int id =1000;
 	//Constructor : prompt user to enter student name and year
 	public Student(){
-		in = new Scanner(System.in);
+		
+		//Scanner in = new Scanner(System.in);
 		System.out.println(" Enter student first name : ");
 		this.firstName = in.nextLine();
 		
@@ -25,9 +26,10 @@ public class Student {
 		System.out.println(" 1- Frehsmen \n 2- Sophomore \n 3 - Junior \n 4- Senior \n Enter student grade level : ");
 		this.gradeYear = in.nextInt();
 		
+		System.out.println(gradeYear);
 		setStudentID();
 		
-		System.out.println(firstName + " " + lastName + " " + gradeYear + "" + studentID);
+		System.out.println(firstName + " " + lastName + " " + gradeYear + " " + studentID);
 	}
 	
 	//Generate an ID
